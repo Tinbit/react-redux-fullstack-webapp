@@ -9,7 +9,10 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers'; // pass this to create first argument
 //for setting up reducer
-//
+
+import axios from 'axios';
+window.axios = axios; // temporary /for testing backend routes / postman kemetekem
+
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
